@@ -1,0 +1,8 @@
+{
+    "mongodbPort" : 3080,
+    "backendPort" : 3000,
+    "jwtSecretAccess": "Such a nice day",
+    "jwtSecretRefresh": "refresh master bad boy",
+    "mongoUri": "mongodb+srv://SnoWSTorM:395593263Z@app.qmqpf.mongodb.net/DataUsers?retryWrites=true&w=majority"
+}
+

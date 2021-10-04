@@ -20,7 +20,7 @@ const REFRESH_TOKEN_SECRET = 'kljhdasdl85a6sf4a62sfdgwwtas';
 const REFRESH_TOKEN_LIFE = 86400; //60 days
 
 
-const apiPort = config.get("mongodbPort") || 3080
+const apiPort = config.get("mongodbPort") || 5000
 
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const chalk = require('chalk');

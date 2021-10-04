@@ -25,7 +25,7 @@ async function start() {
   }
 }
 
-start();
+// start();
 
 app.use('/api/hello', (req, res) => {
   console.log(req)

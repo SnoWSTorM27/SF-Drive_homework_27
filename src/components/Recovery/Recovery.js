@@ -13,7 +13,7 @@ import { callApi } from "../../../callApi";
 export default function Recovery(props) {
     
     async function changePassword () {
-        await callApi("/api/auth/changePass","POST",{email:email, newPassword:password})   
+        await callApi("/api/users/changePass","POST",{email:email, password:password})   
     }
 
     const handleOnClick = () => props.setModalState(MODAL_STATES.Auth);

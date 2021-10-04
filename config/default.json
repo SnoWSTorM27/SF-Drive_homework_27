@@ -1,5 +1,5 @@
 {
-    "mongodbPort" : 3080,
+    "mongodbPort" : 5000,
     "backendPort" : 3000,
     "jwtSecretAccess": "Such a nice day",
     "jwtSecretRefresh": "refresh master bad boy",

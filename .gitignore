@@ -1,2 +1,6 @@
 node_modules
 dist
+nest-server/dist
+nest-server/node_modules
+backend-server-nest/dist
+backend-server-nest/node_modules

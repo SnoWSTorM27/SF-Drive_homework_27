@@ -15,7 +15,7 @@ export async function callApi(url, method, body) {
     })
     .then(res => res.ok ? res : Promise.reject(res))
     .catch(err => {
-        if(err.status === 403) {
+        if(err.status === 401) {
             return updateTokens()
             .then(
                 () => {

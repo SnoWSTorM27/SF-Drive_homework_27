@@ -27,11 +27,7 @@ export class UsersService {
     }
 
     async getUserByEmail(email: string) {
-        const user = await this.userModel.findOne({email})
-        if (!user) {
-            throw new NotFoundException({message: "Пользователь не найден"});
-        }
-        return user;
+        return await this.userModel.findOne({email});
     }
 
     async changePassword(userDto: UpdateUserDto) {

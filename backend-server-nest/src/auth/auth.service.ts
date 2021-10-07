@@ -30,13 +30,18 @@ export class AuthService {
         const payload = {email: user.email, id: (user as any)._id, roles: user.roles}
         
         return {
-            accessToken: this.jwtService.sign(payload,{expiresIn:"40s"}),
+            accessToken: this.jwtService.sign(payload,{expiresIn:"24h"}),
             refreshToken: this.jwtService.sign({})
         }
     }
 
     private async validateUser(userDto: CreateUserDto) {
         const user = await this.userService.getUserByEmail(userDto.email);
+        if (!user) {
+            throw new UnauthorizedException({message: "Некорректный email или пароль"});
+        }
+        
+
         const passwordEquals = await bcrypt.compare(userDto.password, user.password);
         if (user && passwordEquals) {
             return user;
